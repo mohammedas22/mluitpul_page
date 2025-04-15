@@ -9,25 +9,29 @@
           <h2>Get in Touch</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12 col-lg-6 email">
-          <input placeholder="Your email" type="email" id="email" pattern=".+@globex.com" size="30" required>
-        </div>
-        <div class="col-12 col-lg-6 email">
-          <input placeholder="Subject" type="subject" id="subject" size="30" required>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 message">
-          <textarea id="message" name="message" rows="5" cols="1">Message here...</textarea>
-        </div>
-        <div class="col-12">
-          <div class="hero-btns contact-btn">
-            <!-- Send Message Btn -->
-            <a href="#">Send Message</a>
+     <form action="{{ route('postcontact') }}" method="post">
+        @csrf
+        <div class="row">
+            <div class="col-12 col-lg-6 email">
+              <input placeholder="Your email" name="email" type="email" id="email"  size="30" required>
+            </div>
+            <div class="col-12 col-lg-6 email">
+              <input placeholder="Subject" name="subject" type="subject" id="subject" size="30" required>
+            </div>
           </div>
-        </div>
-      </div>
+          <div class="row">
+            <div class="col-12 message">
+              <textarea id="message" name="message" rows="5" cols="1">Message here...</textarea>
+            </div>
+            <div class="col-12">
+              <div class="hero-btns contact-btn">
+                <!-- Send Message Btn -->
+                <button type="submit">Send Message</button>
+
+              </div>
+            </div>
+          </div>
+     </form>
     </div>
   </section>
 

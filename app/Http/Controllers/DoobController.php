@@ -29,5 +29,11 @@ class DoobController extends Controller
         return view('Doob.blog');
     }
 
+    public function postcontact(Request $request){
+        dd($request);
+    }
+
+
+
 
 }

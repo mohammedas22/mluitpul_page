@@ -18,12 +18,13 @@ Route::get('/', function () {
 });
 
 Route::prefix('Doob')->group(function(){
-    Route::get('index', [DoobController::class , 'index']);
-    Route::get('contact', [DoobController::class , 'contact']);
-    Route::get('about_us', [DoobController::class , 'about_us']);
-    Route::get('services', [DoobController::class , 'services']);
-    Route::get('portfolio', [DoobController::class , 'portfolio']);
-    Route::get('blog', [DoobController::class , 'blog']);
+    Route::get('index', [DoobController::class , 'index'])->name('index');
+    Route::get('contact', [DoobController::class , 'contact'])->name('contact');
+    Route::get('about_us', [DoobController::class , 'about_us'])->name('about_us');
+    Route::get('services', [DoobController::class , 'services'])->name('indeservicesx');
+    Route::get('portfolio', [DoobController::class , 'portfolio'])->name('portfolio');
+    Route::get('blog', [DoobController::class , 'blog'])->name('blog');
+    Route::post('contact', [DoobController::class, 'postcontact'])->name('postcontact');
 });
 
 Route::get('masters', function () {

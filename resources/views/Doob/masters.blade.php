@@ -8,7 +8,7 @@
     <!-- Links -->
     <link rel="icon" type="image/png" href="{{asset('Doob/images/favicon.png')}}" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('Doob/icofont.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('Doob/css/icofont.min.css') }}">
     <link href="{{ asset('Doob/css/bootstrap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('Doob/css/slick.css') }}" rel="stylesheet" />
 
@@ -34,23 +34,23 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <!-- Nav Link -->
-              <a class="nav-link" data-scroll href="#home">Home.<span class="sr-only">(current)</span></a>
+              <a class="nav-link" data-scroll href="{{ route('index') }}">Home.<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <!-- Nav Link -->
-              <a class="nav-link" data-scroll href="#about-us">About Us.</a>
+              <a class="nav-link" data-scroll href="{{ route('about_us') }}">About Us.</a>
             </li>
             <li class="nav-item">
               <!-- Nav Link -->
-              <a class="nav-link" data-scroll href="#portfolio">Portfolio.</a>
+              <a class="nav-link" data-scroll href="{{ route('portfolio') }}">Portfolio.</a>
             </li>
             <li class="nav-item">
               <!-- Nav Link -->
-              <a class="nav-link" data-scroll href="#blog">Blog.</a>
+              <a class="nav-link" data-scroll href="{{ route('portfolio') }}">Blog.</a>
             </li>
             <li class="nav-item">
               <!-- Nav Link -->
-              <a class="nav-link" data-scroll href="#contact-us">Contact Us.</a>
+              <a class="nav-link" data-scroll href="{{ route('contact') }}">Contact Us.</a>
             </li>
             <li class="nav-item dropdown">
               <!-- Lang Dropdown Link -->
@@ -65,7 +65,7 @@
           </ul>
           <form data-scroll href="#contact-us" class="contact-btn form-inline my-2 my-lg-0">
             <!-- Contacgt Us Button -->
-            <button>Contact Us</button>
+            <a href="{{ route('contact') }}"><button >Contact Us</button></a>
           </form>
         </div>
       </nav>
